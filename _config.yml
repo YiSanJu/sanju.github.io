@@ -1,9 +1,9 @@
 # Site settings
-title: SanJu
-SEOTitle: 三句的信使 | SanJu
-header-img: img/title.jpg
+title: SanJu   #你博客的标题
+SEOTitle: 三句的信使 | SanJu #显示在浏览器上搜索的时候显示的标题
+header-img: img/title.jpg #显示在首页的背景图片
 email: 1307022894@qq.com
-description: "A blog for Sanju."
+description: "A blog for Sanju." #网站介绍
 keyword: "SanJu,blog,个人记录"
 url: "https://YiSanJu.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -17,7 +17,7 @@ sidebar-avatar: /img/nav.jpg      # use absolute URL, seeing it's used in both `
 
 
 # SNS settings
-RSS: false
+RSS: false #展示社交平台，目前只展示github
 # weibo_username:     awang
 # zhihu_username:     awang
 github_username: YiSanJu
