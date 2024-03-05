@@ -1,5 +1,17 @@
 
+## ChangeLog
 
+* tag:1.0：总结了自己第一段工作经历;主要包括UNeed组件库、音视频wasm开发以及uniapp的简单开发
+
+### 项目集合
+
+uniapp混合开发：宇视停车公众号、云存储订阅购买、宇视管家（uniapp + dsbridge(flutter)）		
+
+web开发：RTSP免控件(rtsp(flv)/wasm)、新插件(窗口挂载/插件通信)、UNeed组件库（vue/element）
+
+
+
+## 搭建教程
 博客的搭建教程来源于 [qiubaiying](https://github.com/qiubaiying/qiubaiying.github.io) ，README也是那里改过来的哦
  
 详细的教程戳这里 [邱柏荧的《利用 GitHub Pages 快速搭建个人博客》](http://www.jianshu.com/p/e68fba58f75c) 或 [wiki](https://github.com/qiubaiying/qiubaiying.github.io/wiki/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B)
