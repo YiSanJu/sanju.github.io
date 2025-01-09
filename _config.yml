@@ -1,7 +1,7 @@
 # Site settings
 title: SanJu   #你博客的标题
 SEOTitle: 三句的信使 | SanJu #显示在浏览器上搜索的时候显示的标题
-header-img: img/title.jpg #显示在首页的背景图片
+header-img: img/main.jpg #显示在首页的背景图片
 email: 1307022894@qq.com
 description: "A blog for Sanju." #网站介绍
 keyword: "SanJu,blog,个人记录"
@@ -31,70 +31,71 @@ github_username: YiSanJu
 
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# 使用rouge作为代码高亮工具,因为从2016年起GitHub Pages不再支持pygments
+permalink: pretty  # 生成优雅的URL
+paginate: 10      # 每页显示的文章数量
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]  # 构建时排除的文件
+anchorjs: true    # 是否启用锚点功能,可在post.html的181行自定义
 
 
 
 # Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+# 支持本地预览 Jekyll 3.0
+plugins: [jekyll-paginate]  # gems 已弃用，改用 plugins
 
-
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
+# Markdown 设置
+markdown: kramdown  # 使用 kramdown 作为 markdown 解析器
+highlighter: rouge  # 代码高亮工具
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
+  input: GFM  # 使用 GitHub Flavored Markdown
+  syntax_highlighter: rouge  # 指定代码高亮工具
+  syntax_highlighter_opts:  # 高亮选项
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: awang
-
-# Gitalk
+# Gitalk 配置
 gitalk:
-  enable: false    #是否开启Gitalk评论
-  clientID: 15ba47af24ac403a9475                            #生成的clientID
-  clientSecret: 44e99e239e307115485b9da5f035b3268d6772d1    #生成的clientSecret
-  repo: awang0608.github.io    #仓库名称
-  owner: awang0608    #github用户名
-  admin: awang0608
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  enable: false  # 是否启用 Gitalk
+  clientID: ''  # 你的 GitHub Application Client ID
+  clientSecret: ''  # 你的 GitHub Application Client Secret
+  repo: 'YiSanJu.github.io'  # 仓库名称
+  owner: 'YiSanJu'  # GitHub 用户名
+  admin: ['YiSanJu']  # GitHub 管理员用户名
+  distractionFreeMode: true  # 是否启用无干扰模式
+  language: 'zh-CN'  # 设置语言
 
-
-# 统计
-
-# Analytics settings
-# Baidu Analytics
-# ba_track_id: 0070d40a1f6efbc05ae10a9a3729a23b
+# 网站统计
+# 百度统计
+# ba_track_id: ''
 
 # Google Analytics
-# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: auto                         # 默认的是 auto, 可填写自定义域名
+# ga_track_id: ''  # 格式: UA-xxxxxx-xx
+# ga_domain: auto
+
+# 标签设置
+featured-tags: true  # 是否启用标签
+featured-condition-size: 2  # 标签展示阈值
+
+# PWA 设置
+chrome-tab-theme-color: "#000000"  # Chrome 标签主题色
+service-worker: true  # 是否启用 Service Worker
 
 
 
+# 推荐标签设置
+featured_tags:
+  enabled: true                     # 是否启用首页标签
+  condition_size: 2                 # 标签出现的最小文章数量
 
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 2              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+# 渐进式网页应用 (PWA) 设置
+pwa:
+  chrome_tab_theme_color: "#000000" # Chrome 标签主题色
+  service_worker: true               # 是否启用服务工作器
 
 
 

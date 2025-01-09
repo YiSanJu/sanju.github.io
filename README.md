@@ -1,4 +1,18 @@
 
+# 总览
+	基于 GitHub Pages 和 Jekyll 搭建的个人博客项目
+	Jekyll 是一个简单的、静态网站生成器。它可以将纯文本（主要是 Markdown 格式）转换成静态网站或博客
+	直接部署到 GitHub Pages	免费托管
+## 工作原理
+```plaintext
+输入（源文件）    -->     Jekyll 处理     -->     输出（静态网站）
+├── _posts/            转换 Markdown          ├── index.html
+├── _layouts/          处理模板              ├── blog/
+├── _includes/         组合组件              ├── css/
+└── _config.yml        应用配置              └── 其他静态文件
+```
+
+
 ## ChangeLog
 
 * tag:1.0：总结了自己第一段工作经历;主要包括UNeed组件库、音视频wasm开发以及uniapp的简单开发
